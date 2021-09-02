@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Title of the document</title>
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+
+<body>
+    <form id="signup">
+        <label for="name" class="name">Name:
+            <input required id="name" type="text" placeholder="Enter Name" />
+            <small>Name is required</small>
+        </label>
+        <label for="email" class="email">Email:
+            <input required id="email" type="email" placeholder="Enter Email" />
+            <small>Enter correct email</small>
+        </label>
+        
+        <label for="password" class="password">Password:
+            <input pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" required id="password" type="password" placeholder="Enter Password" />
+            <small>Password must contain at least 1 alphabet, 1 number and 8 chars</small>
+        </label>
+        <label for="gender" class="gender">Gender:
+            <label class="light" for="male"><input id="male" type="radio" name="gender"/>Male</label>
+            <label class="light" for="female"><input id="female" type="radio" name="gender"/>Female</label>
+            <label class="light" for="other"><input id="other" type="radio" name="gender"/>Other</label>
+            <small>Gender is required</small>
+        </label>
+        <label for="Options" class="options">Options:
+            <label class="light"><input name="options" type="checkbox"  value="stocks" />Stocks</label>
+            <label class="light"><input  name="options" type="checkbox" value="Mutual funds" />Mutual funds</label>
+            <small>Select at least one option</small>
+        </label>
+        <label for="place" class="place">Place:
+            <select id="place">
+                <option>Indore</option>
+                <option>Pune</option>
+                <option>Bangalore</option>
+            </select>
+        </label>
+        <label for="details" class="details">Details:
+            <textarea id="details" name="details"></textarea>
+        </label>
+        <button onclick="validateForm()" type="submit">Subscribe</button>
+    </form>
+    <script src="form.js"></script>
+</body>
+
+</html>
